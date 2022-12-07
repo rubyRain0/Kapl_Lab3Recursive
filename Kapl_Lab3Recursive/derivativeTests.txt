@@ -1,0 +1,7 @@
+((7-(x+2))+(3+(x-5))) passed
+(x*3) passed
+((x*3)+6) passed
+((x*3)+(3-(7*x))) passed
+((x*3)*6) passed
+(6*(x*3)) passed
+((x*5)+(x*3)) passed
