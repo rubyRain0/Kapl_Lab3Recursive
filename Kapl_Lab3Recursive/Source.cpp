@@ -38,8 +38,7 @@ Tree copyTree(const Tree& node)
 Tree derivativeTree(const Tree& node)
 {
     if (node == nullptr)
-        return nullptr;
-
+        return nullptr; 
     Tree tmp = new NODE(node->info);
     std::cout << node->info;
     tmp->left = derivativeTree(node->left);
@@ -83,7 +82,9 @@ Tree derivativeTree(const Tree& node)
 bool task1(const Tree& T, Tree& T1, char derivativeVar)
 {
     bool result = true;
-    T1 = derivativeTree(T);
+    if (isOperator(T->info))
+        T1 = derivativeTree(T);
+    else T1 = new NODE(derivative(T->info));
     if (!T1)
         result = false;
     return result;
